@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World Component</title>
+    <script type="text/javascript" src="htmlcomponentIE.js"></script>
+    <script type="text/javascript">
+        HTMLComponent.Config.UseIFrame = true;        
+    </script>
+</head>
+<body>
+    Hello World <span id="user"></span>
+    
+    <script>
+        
+        var user = document.getElementById("user");
+        
+        window.public_setUser = function(usr) {
+            user.innerHTML = usr;
+        };
+        
+        window.get_user = function() {
+            return user.textContent;
+        };
+        
+        window.set_user = function(user) {
+            document.getElementById("user").innerHTML = user;            
+        };
+        
+        // Event decleration  
+        window.event_customEvent = function() {};
+        
+        user.onclick = function(event) {
+            HTMLComponent.Event.raise("customEvent");
+        };
+        //HTMLComponent.ShowDocumentation = false;
+    </script>
+</body>
+</html>

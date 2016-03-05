@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World CrossDomain Component</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="htmlcomponent.crossdomain.js"></script>
+    </head>
+    <body>
+        <div>Hello World <span id="user"></span></div>
+        
+        <script>
+            function public_setUser(username) {
+                var user = document.getElementById("user");
+                user.textContent = username;
+            }
+            
+        </script>
+    </body>
+</html>

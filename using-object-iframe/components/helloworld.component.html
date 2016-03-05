@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World Component</title>
+    <script type="text/javascript" src="htmlcomponent.js"></script> 
+</head>
+<body>
+    Hello World <span id="user"></span>
+    
+    <script>        
+        var user = document.getElementById("user");
+        
+        function public_setUser(usr) {
+            user.textContent = usr;
+        }
+        
+        function get_user() {
+            return user.textContent;
+        }
+        
+        function set_user(user) {
+            document.getElementById("user").textContent = user;            
+        }
+        
+        // Event decleration  
+        function event_onclick() {}
+        
+        user.onclick = function(event) {
+            HTMLComponent.Event.raise("onclick");
+        };
+        //HTMLComponent.ShowDocumentation = false;
+    </script>
+</body>
+</html>

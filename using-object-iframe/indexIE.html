@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Hello World</title>
+    <style>body { font: menu; } </style>
+    <script src="jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+        var object1 = document.getElementById("Object1");
+        $(object1).load(function() {
+           this.user = "Aliccc";
+           
+        });
+    });
+    
+    window.onload = function() {
+        var object1 = document.getElementById("Object1");
+        //object1.__setProperty__("user", "Alice");
+        object1.customEvent = function() {
+            console.log("oncustomEvent live function");
+        };
+        
+        $("#Object1").on("customEvent", function() {
+            alert("Hello");
+         });
+       
+        /*
+        object1.addEventListener("onclick", function(){
+            console.log("onclick addEventListener");
+        }, false);
+        */
+    };
+     
+    </script>
+    
+</head>
+<body>
+   
+<iframe id="myComponent1" src="components/helloworldIE.component.html" data-param-user="Bob" frameborder="0"></iframe>
+<iframe id="Object1" src="components/helloworldIE.component.html" frameborder="0"></iframe>
+
+    <div>This is a sample page</div>
+</body>
+</html>

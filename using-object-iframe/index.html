@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Hello World</title>
+    <style>body { font: menu; } </style>
+    <script type="text/javascript">
+    
+    window.onload = function() {
+        var object1 = document.getElementById("Object1");
+        object1.user = "Alice";
+        object1.onclick = function() {
+            console.log("onclick live function");
+        };
+       
+        /*
+        object1.addEventListener("onclick", function(){
+            console.log("onclick addEventListener");
+        }, false);
+        */
+    };
+     
+    </script>
+    
+</head>
+<body>
+   
+<object id="myComponent1" data="components/helloworld.component.html" type="text/html">
+    <param name="user" value="Bob" />
+</object>
+
+<object id="Object1" data="components/helloworld.component.html" type="text/html"></object>
+
+    <div>This is a sample page</div>
+</body>
+</html>

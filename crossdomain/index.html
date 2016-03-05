@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cross Domain HTML component</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="htmlcomponent.companion.js"></script>
+    </head>
+    <body>
+        <iframe id="helloWorldComponent" src="component/helloworld.component.html" data-param-user="Alice" frameborder="0"></iframe>
+        
+        <iframe id="helloWorldComponent1" src="component/helloworld.component.html" data-param-user="Alice" frameborder="0"></iframe>
+        
+        <script>
+            var helloWorldComponent = document.getElementById("helloWorldComponent");
+            var helloWorldComponent1 = document.getElementById("helloWorldComponent1");
+            
+            helloWorldComponent1.addEventListener("HTMLComponentLoaded", function() {
+                this.setUser("Another User");
+            }, false);
+            
+            helloWorldComponent.addEventListener("HTMLComponentLoaded", function() {
+                this.setUser("Vivek");
+            }, false);
+            
+        </script>
+    </body>
+</html>
