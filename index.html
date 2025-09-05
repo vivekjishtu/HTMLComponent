@@ -1,31 +1,59 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>&lt;html-component /&gt;</title>
-    <style> html { font: caption; } </style>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<title>html-component - Craft Interactive Web Components</title>
+<link href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E%26%23128187%3B%3C/text%3E%3C/svg%3E" rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
 </head>
-<body>
-<h1 style="
-"><code style="
-    color:  gray;
-">
-   &lt;<span style="color: #2566CA;">html-component</span> /&gt; </code>
-</h1>
-
+<body class="bg-white text-gray-800">
+<div class="flex size-full min-h-screen flex-col overflow-hidden">
+<div class="relative z-10 flex h-full grow flex-col">
+<header class="flex items-center justify-between p-4 sm:p-6 lg:px-8">
+<div class="flex items-center gap-2">
+<svg class="h-8 w-8 text-indigo-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="text-xl font-bold tracking-wide text-gray-900">html-component</span>
+</div>
+<nav class="flex items-center gap-6 sm:gap-8">
+<a class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors" href="#">Docs</a>
+<a class="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors" href="#">GitHub</a>
+</nav>
+</header>
+<main class="flex flex-1 flex-col items-center justify-center p-4 text-center">
+<div class="max-w-3xl mx-auto">
+<h1 class="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-gray-900">
+                        Build web components, simply.
+                    </h1>
+<p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+                        A lightweight library for creating powerful, reusable, and framework-agnostic web components with clean HTML.
+                    </p>
+<div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="flex w-full sm:w-auto items-center justify-center rounded-md h-12 px-8 bg-indigo-600 text-white text-base font-semibold shadow-sm transition-all hover:bg-indigo-500 active:scale-95" href="#">
+<span>Get Started</span>
+<svg class="ml-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="flex w-full sm:w-auto items-center justify-center rounded-md h-12 px-6 bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200 hover:border-gray-300 transition-all" href="#">
+<!-- <code class="text-sm font-mono bg-transparent">npm install html-component</code> -->
+</a>
+</div>
+</div>
+</main>
+<footer class="p-4 sm:p-6 text-center text-sm text-gray-500">
 <p>
-<aside>
-  Basic guidelines to create a new HTML Component
-  <ul>
-    <li>The component javascript runs in a different context and does not effect the javascript running on the host page</li>
-    <li>You can call methods and properties on the object created on the webpage</li>
-    <li>The object can talk to the host using events</li>    
-  </ul>
-</aside>
-    
-</p>
+                    Released under the MIT License. Copyright © 2025 html-component
+                </p>
+</footer>
+</div>
+</div>
 
-  
- 
-</body>
-</html>
+</body></html>
